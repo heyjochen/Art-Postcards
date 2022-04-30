@@ -8,7 +8,7 @@ I am diving deeper into Object Oriented Programming and am building a Website th
 I am focusing on how to fetch data from The Chicago Art Institue's API and develop my skills in Object Oriented Programming.
 
 ## Lessons Learned:
-As the API of the Chicago Art Instute paginates requests after 10 entries and the Artwork ID's are not consecutive, I was not able to generate a random ID easily. My workaround was to make use of their offline data dump, manipulating the provided JSON file and extracting all of the ID's. From there I could map the ID's easily into an array and create a random number for the length of the Array, which corresponds to a random ID. Using that ID, I was then able to fetch data from their API.
+As the API of the Chicago Art Instute paginates requests after 10 entries and the Artwork ID's are not consecutive, I was not able to generate a random ID easily. My workaround was to make use of their offline data dump, manipulating the provided JSON file and extracting all of the ID's. From there I could map the ID's easily into an array and create a random number for the length of the Array, which corresponds to an ID. Using that ID, I was then able to fetch data from their API.
 
 
 ## More Projects
