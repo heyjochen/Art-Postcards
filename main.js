@@ -1,3 +1,11 @@
+// Calculate a random number that corresponds to the ID of an artwork in the AIC API
+
+// Fetch that artwork and create a new instance of a Class
+
+// Define a constructor with data.title, data.thumbnail.lqip, data.thumbnail.alt_text, data.place_of_origin,, data.dimensions, data.medium_display, data.department_title, data.artists_titles, data.style_titles
+
+// Fill the HTML Elements with corresponding fetched values
+
 fetch("./artworks_IDs.json")
 .then(response => {
    return response.json();
