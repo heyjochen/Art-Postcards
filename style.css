@@ -1,3 +1,8 @@
+/* To Do:
+    Make Responsive, and insert divider and Logo and Square for Stamp
+*/
+
+
 /******************************************
 /* CSS
 /*******************************************/
@@ -64,12 +69,18 @@ img{
     padding: 2rem;
 }
 
+.postcards__back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .postcards__back__text{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
-    padding: 4rem 0 0 2rem;
+    padding: 0 2rem;
 }
 
 .postcards__back__paragraph{
@@ -85,6 +96,11 @@ img{
 .postcards__back__address{ 
     width: 48%;
     text-align: right;
+}
+
+.postcards__back__artworkInfo{
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
 
