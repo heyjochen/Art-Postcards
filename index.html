@@ -5,9 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="main.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Art Postcards</title>
 </head>
 <body>
+
+    <main>
+
+        <h1 class="title" id="title">
+            Postcard Generator
+        </h1>
+
+        <section class="postcards" id="postcards">
+
+            <section class="postcards__front" id="postcards__front">
+                <img src="https://images.unsplash.com/photo-1649948043343-6e8012afb14b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTM0MDgzOA&ixlib=rb-1.2.1&q=80&w=1080" alt="">
+            </section>
+
+            <section class="postcards__back" id="postcards__back">
+                <div>
+                    <h2>Post Card</h2>
+                </div>
+
+                <div class="postcards__back__text">
+                        <p class="postcards__back__paragraph">This is where your text goes: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, officia dicta? Est aliquid laboriosam, dolorem non qui unde harum? Labore eum ullam est. Fuga quaerat temporibus quod consequatur esse neque? Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <!-- <div class="postcards__back__divider"></div> -->
+                    <div class="postcards__back__address">
+                        <h3>First Name, Last Name</h3>
+                        <div class="address_line"></div>
+                        <h3>Street Number, Apt</h3>
+                        <div class="address_line"></div>
+                        <h3>City, State, ZIP</h3>
+                        <div class="address_line"></div>
+                        <h3>Country</h3>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+
+        <div class="buttons" id="buttons">
+            <button class="shuffle" id="shuffle">
+                Shuffle
+            </button>
+            <button class="print" id="print">
+                Print
+            </button>
+        </div>
+
+    </main>
     
 </body>
 </html>
