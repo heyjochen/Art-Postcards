@@ -19,7 +19,7 @@
         <section class="postcards" id="postcards">
 
             <section class="postcards__front" id="postcards__front">
-                <img src="https://images.unsplash.com/photo-1649948043343-6e8012afb14b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTM0MDgzOA&ixlib=rb-1.2.1&q=80&w=1080" id="postcard-image" alt="">
+                <img src="https://images.unsplash.com/photo-1649948043343-6e8012afb14b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTM0MDgzOA&ixlib=rb-1.2.1&q=80&w=1080" id="postcard-image">
             </section>
 
             <section class="postcards__back" id="postcards__back">
@@ -36,7 +36,7 @@
 
                 </div>
                 <div>
-                    <h5 class="postcards__back__artworkInfo">data.title, data.thumbnail.lqip, data.thumbnail.alt_text, data.place_of_origin,, data.dimensions, data.medium_display, data.department_title, data.artists_titles, data.style_titles</h5> 
+                    <h5 class="postcards__back__artworkInfo" id="artworkInfo"></h5> 
                 </div>
 
             </section>
@@ -44,7 +44,7 @@
         </section>
 
         <div class="buttons" id="buttons">
-            <button class="shuffle" id="shuffle">
+            <button class="shuffle" id="shuffle" onclick="fetchIDFromLocalJSON()">
                 Shuffle
             </button>
             <button class="print" id="print">
