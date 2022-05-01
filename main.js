@@ -39,6 +39,7 @@ function fetchPostcard(ID, number){
         .then(artwork => { console.log(artwork.data.thumbnail.alt_text)
             const postcard = new Postcard(artwork)
             postcard.displayArtworkInfo();
+            postcard.setImageAlt();
             // call the postcard functions
 
         })
@@ -72,6 +73,10 @@ class Postcard {
 
     displayArtworkInfo(){
         document.querySelector('#artworkInfo').textContent = `${this.artist}: ${this.title}, ${this.date}`
+    }
+
+    setImageAlt(){
+        document.querySelector('#postcard-image').alt = `${this.thumbnail_info}`
     }
 
 }
