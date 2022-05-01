@@ -9,9 +9,9 @@
 
 // Check constructor and make sure it works
 
-fetchPostcard();
+fetchIDFromLocalJSON();
 
-function fetchPostcard() {
+function fetchIDFromLocalJSON() {
     
     fetch("./artworks_IDs.json")
 
@@ -21,17 +21,27 @@ function fetchPostcard() {
         data.forEach(e => ID.push(e.A))
         
         const randomNumber = Math.floor(Math.random() * (Math.floor(ID.length) - Math.ceil(1) + 1) + Math.ceil(1))
-        // next fetch should go into seperate function and should be called with ID and randomNumber as an argument
-        fetch(`https://api.artic.edu/api/v1/artworks/${ID[randomNumber]}`)
+
+        fetchPostcard(ID, randomNumber)
+    })
+
+        .catch(err => {
+            console.log(`error ${err}`)
+        // console.log(randomNumber)
+        // console.log(ID[randomNumber])
+    })
+}
+
+
+function fetchPostcard(ID, number){
+    fetch(`https://api.artic.edu/api/v1/artworks/${ID[number]}`)
         .then(res => res.json())
         .then(artwork => { console.log(artwork.data.thumbnail.alt_text)
             const postcard = new Postcard(artwork)
         
-            // call the functions
+            // call the postcard functions
 
-        });
-    })
-
+        })
 
         .catch(err => {
             console.log(`error ${err}`)
