@@ -13,7 +13,7 @@ fetchIDFromLocalJSON();
 
 function fetchIDFromLocalJSON() {
     
-    fetch("./artworks_IDs.json")
+    fetch("/artworks_IDs.json")
 
     .then(res => res.json())
     .then(data => {
@@ -78,5 +78,7 @@ class Postcard {
     setImageAlt(){
         document.querySelector('#postcard-image').alt = `${this.thumbnail_info}`
     }
+
+    
 
 }
