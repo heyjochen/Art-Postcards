@@ -57,22 +57,25 @@ main{
 .postcards__front, .postcards__back{
     flex: 1 1 auto;
     width: 50%;
-
     aspect-ratio: 6 / 4;
-    border: .25rem dashed black;
+    /* border: .25rem dashed black; */
 
 }
 
 img{
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
     padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
 }
 
 .postcards__back{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
+
 }
 
 .postcards__back__text{
@@ -157,7 +160,7 @@ button{
     border-radius: 2rem;
     width: 10rem;
     height: 4rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     background-color: transparent;
     color: black;
     border: .25rem solid black;
@@ -187,19 +190,28 @@ h1 {
     text-align: center;
     font-weight: 700;
     margin-top: 0;
-    font-size: 7.5vw;
+    font-size: 6vw;
 }
 
 h2 {
     font-size: 4rem;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    padding-top: 2rem;
 }
 
 h3 {font-size: 1.953rem;}
 
 h4 {font-size: 1.563rem;}
 
-h5 {font-size: 1.25rem;}
+h5 {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
 
 small, .text_small {font-size: 0.8rem;}
 
@@ -218,9 +230,26 @@ small, .text_small {font-size: 0.8rem;}
 
     .postcards{
         display: block;
+        padding: 1rem 5rem;
     }
+
+    .postcards__back {
+        margin-top: 2rem;
+    }
+
 
     .postcards__front, .postcards__back{
         width: 100%;
+    }
+
+    textarea {
+        font-size: 1.2rem;
+        padding: 2rem;
+        width: 40ch;
+        height: 2rem;
+    }
+
+    .postcards__back__paragraph{
+        height: 12rem;
     }
 }
