@@ -38,7 +38,7 @@ function fetchPostcard(ID, number){
         .then(res => res.json())
         .then(artwork => { console.log(artwork.data.thumbnail.alt_text)
             const postcard = new Postcard(artwork)
-        
+            postcard.displayArtworkInfo();
             // call the postcard functions
 
         })
@@ -56,11 +56,12 @@ class Postcard {
         this.title = artworkInfo.data.title
         this.thumbnail = artworkInfo.data.thumbnail.lqip
         this.thumbnail_info = artworkInfo.data.thumbnail["alt_text"]
+        this.date = artworkInfo.data["date_end"]
         this.origin = artworkInfo.data.place_of_origin
         this.dimensions = artworkInfo.data.dimensions
         this.medium_display = artworkInfo.data.medium_display
         this.department = artworkInfo.data.department_title
-        this.artists = artworkInfo.data.artists_titles
+        this.artist = artworkInfo.data.artist_titles
         this.style = artworkInfo.data.style_titles
 
     }
@@ -70,7 +71,7 @@ class Postcard {
     }
 
     displayArtworkInfo(){
-        //
+        document.querySelector('#artworkInfo').textContent = `${this.artist}: ${this.title}, ${this.date}`
     }
 
 }
