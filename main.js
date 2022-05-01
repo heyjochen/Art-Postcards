@@ -5,9 +5,13 @@
 // Define a constructor with data.title, data.thumbnail.lqip, data.thumbnail.alt_text, data.place_of_origin,, data.dimensions, data.medium_display, data.department_title, data.artists_titles, data.style_titles
 
 // Fill the HTML Elements with corresponding fetched values
-fetchID();
 
-function fetchID() {
+
+// Check constructor and make sure it works
+
+fetchPostcard();
+
+function fetchPostcard() {
     
     fetch("./artworks_IDs.json")
 
@@ -17,12 +21,14 @@ function fetchID() {
         data.forEach(e => ID.push(e.A))
         
         const randomNumber = Math.floor(Math.random() * (Math.floor(ID.length) - Math.ceil(1) + 1) + Math.ceil(1))
-
+        // next fetch should go into seperate function and should be called with ID and randomNumber as an argument
         fetch(`https://api.artic.edu/api/v1/artworks/${ID[randomNumber]}`)
         .then(res => res.json())
-        .then(artwork => { console.log(artwork.data.artist_display)
+        .then(artwork => { console.log(artwork.data.thumbnail.alt_text)
             const postcard = new Postcard(artwork)
         
+            // call the functions
+
         });
     })
 
@@ -37,16 +43,24 @@ function fetchID() {
 
 class Postcard {
     constructor(artworkInfo){
-        this.title = artworkInfo.title
-        this.thumbnail = artworkInfo.thumbnail.lqip
-        this.thumbnail.alt_text = artworkInfo.thumbnail.alt_text
-        this.origin = artworkInfo.place_of_origin
-        this.dimensions = artworkInfo.dimensions
-        this.medium_display = artworkInfo.medium_display
-        this.department_title = artworkInfo.department_title
-        this.artists_titles = artworkInfo.artists_titles
-        this.style_titles = artworkInfo.style_titles
+        this.title = artworkInfo.data.title
+        this.thumbnail = artworkInfo.data.thumbnail.lqip
+        this.thumbnail_info = artworkInfo.data.thumbnail["alt_text"]
+        this.origin = artworkInfo.data.place_of_origin
+        this.dimensions = artworkInfo.data.dimensions
+        this.medium_display = artworkInfo.data.medium_display
+        this.department = artworkInfo.data.department_title
+        this.artists = artworkInfo.data.artists_titles
+        this.style = artworkInfo.data.style_titles
 
+    }
+
+    displayImage(){
+        //
+    }
+
+    displayArtworkInfo(){
+        //
     }
 
 }
