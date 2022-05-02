@@ -1,4 +1,4 @@
-# Postcard Shuffler: <a href="" target="_blank">See Live soon</a>
+# Postcard Shuffler: <a href="https://chicagopostcard.netlify.app/" target="_blank">See WIP here</a>
 <a href="" target="_blank"><img src="/assets/readme.gif" /></a>
 
 I am diving deeper into Object Oriented Programming and am building a Website that generates a Postcard with a random Image out of the Chicago Art Institute's Collection. By clicking a print button users are then able to print their postcard at home.
