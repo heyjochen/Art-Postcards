@@ -1,13 +1,4 @@
-// Calculate a random number that corresponds to the ID of an artwork in the AIC API
-
-// Fetch that artwork and create a new instance of a Class
-
-// Define a constructor with data.title, data.thumbnail.lqip, data.thumbnail.alt_text, data.place_of_origin,, data.dimensions, data.medium_display, data.department_title, data.artists_titles, data.style_titles
-
-// Fill the HTML Elements with corresponding fetched values
-
-
-// Check constructor and make sure it works
+// check if there is an alt_text if not reload
 
 fetchIDFromLocalJSON();
 
@@ -21,7 +12,7 @@ function fetchIDFromLocalJSON() {
         data.forEach(e => ID.push(e.A))
         
         const randomNumber = Math.floor(Math.random() * (Math.floor(ID.length) - Math.ceil(1) + 1) + Math.ceil(1))
-
+        console.log(ID[randomNumber])
         fetchPostcard(ID, randomNumber)
     })
 
@@ -77,7 +68,7 @@ class Postcard {
     }
 
     displayArtworkInfo(){
-        document.querySelector('#artworkInfo').textContent = `${this.artist}: ${this.title}, ${this.date}`
+        document.querySelector('#artworkInfo').innerHTML = `${this.artist}: ${this.title}, ${this.date},<br>${this.medium_display}`
     }
 
     setImageAlt(){
