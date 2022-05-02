@@ -25,7 +25,7 @@ html{
 }
 
 body {
-    background: white;
+    background: rgb(213, 220, 240)	;
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
     line-height: 1.5;
@@ -41,112 +41,31 @@ main{
 }
 
 
-/******************************************
-/* MODULES
-/*******************************************/
-
-.postcards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
-
-}
-
-.postcards__front, .postcards__back{
-    flex: 1 1 auto;
-    width: 50%;
-    aspect-ratio: 6 / 4;
-    /* border: .25rem dashed black; */
-
-}
-
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.postcard-textelements {
     padding: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
-}
-
-.postcards__back{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
-
-}
-
-.postcards__back__text{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 100%;
-    padding: 0 2rem;
-}
-
-textarea {
-    padding: 2rem;
-    width: 43ch;
-    height: 20rem;
-    font-family: 'Water Brush', cursive;
     resize: none;
     border-radius: 10px;
     border: .2rem solid transparent;
     outline: none;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.4;
-  }
+}
   
-textarea:hover {
+.postcard-textelements:hover {
     cursor: pointer;
-    background-color: transparent;
-    border: 1px solid black;
-    border-radius: 2rem;
+    background-color: white;
+    vertical-align: text-bottom;
 }
   
-.textarea:focus {
+.postcard-textelements:focus {
     cursor: text;
-    color: black;
-    background-color: white;
-    border-color: #333333;
 }
 
-.postcards__back__paragraph{
-    height: 20rem;
-}
-
-.postcards__back__divider{
-    width: .2rem;
-    height: 2rem;
-    background-color: black;
-}
-
-.postcards__back__address{ 
-    width: 48%;
-    text-align: right;
-    position: relative;
-
-}
-
-.postcards__back__addressline{ 
-    font-family: 'Barlow', sans-serif;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.postcards__front img{
     width: 100%;
-    height: 12rem;
+    height: 98%;
+    object-fit: contain;
+    padding: 2rem;
 
 }
-
-.postcards__back__artworkInfo{
-    text-align: center;
-    padding-bottom: 1rem;
-}
-
 
 .buttons{
     display: flex;
@@ -162,13 +81,102 @@ button{
     height: 4rem;
     margin: 1rem 0;
     background-color: transparent;
-    color: black;
-    border: .25rem solid black;
+    color: rgb(247, 248, 252);
+    border: .25rem solid white;
 }
 
 button:hover{
+    background-color: white;
+    color: rgb(213, 220, 240);
+    cursor: crosshair;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+.postcards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 4rem 0;
+
+}
+
+.postcards__front, .postcards__back{
+    flex: 1 1 auto;
+    width: 50%;
+    aspect-ratio: 6 / 4;
+    background-color: #f5f5f0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px 2.6px;
+}
+
+.postcards__back{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.postcards__back__header{
+    width: 100%;
+    height: 20%;
+}
+
+.postcards__back__text{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60%;
+    padding: 0 2rem;
+}
+
+.postcards__back__paragraph{
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+    font-family: 'Water Brush', cursive;
+    font-weight: 500;
+    vertical-align: bottom;
+    font-size: clamp(1.6rem, 1.4vw, 5rem);
+    line-height: 1.4;
+}
+
+.postcards__back__paragraph p{
+    width: 90%;
+    overflow: hidden;
+}
+
+/* .postcards__back__divider{
+    width: .3rem;
+    height: 100%;
+    margin: 0 1rem;
     background-color: black;
-    color: white;
+} */
+
+.postcards__back__address{ 
+    width: 38%;
+    text-align: right;
+    position: relative;
+}
+
+.postcards__back__addressline{ 
+    font-family: 'Barlow', sans-serif;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+.postcards__back__footer{
+    height: 10%
+}
+
+.postcards__back__artworkInfo{
+    text-align: center;
+    padding: 0rem 2rem;
 }
 
 /******************************************
@@ -187,14 +195,18 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
+    font-family: 'Water Brush', cursive;
+    font-weight: 500;
+    border-bottom: .5rem solid white;
     text-align: center;
     font-weight: 700;
     margin-top: 0;
     font-size: 6vw;
+    color: rgb(247, 248, 252);
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 4vw;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -220,9 +232,6 @@ small, .text_small {font-size: 0.8rem;}
 /* RESPONSIVE BEHAVIOUR
 /*******************************************/
 @media screen and (max-width: 900px) {
-    /* h1{
-        font-size: 3.052rem;
-    } */
 
     main{
         max-width: 700px;
@@ -234,6 +243,8 @@ small, .text_small {font-size: 0.8rem;}
     }
 
     .postcards__back {
+        display: flex;
+        justify-content: space-between;
         margin-top: 2rem;
     }
 
@@ -242,14 +253,51 @@ small, .text_small {font-size: 0.8rem;}
         width: 100%;
     }
 
-    textarea {
-        font-size: 1.2rem;
-        padding: 2rem;
-        width: 40ch;
-        height: 2rem;
+    h5 {
+        font-size: 1rem;
+
     }
 
-    .postcards__back__paragraph{
-        height: 12rem;
+}
+
+/******************************************
+/* Print Mode Behaviour
+/*******************************************/
+@media print {
+    /*  */
+    @page { size: auto;  margin: 0mm; }
+
+    body{
+        display: flex;
+        justify-content: center;
+
     }
+
+
+    button, h1{
+        height: 0;
+        visibility: hidden;
+    }
+
+    body, .postcards{
+        background-color: white;
+        padding: 0;
+    }
+
+    .postcards{
+        display: block;
+    }
+
+    .postcards__front, .postcards__back{
+        margin-top: 4rem;
+        width: 6in;
+        height: 4in;
+    }
+
+    .postcards__back{
+        page-break-before: page;
+        -webkit-break-before: page;
+        break-before: page;
+    }
+       
 }
