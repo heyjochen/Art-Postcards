@@ -250,14 +250,10 @@ small, .text_small {font-size: 0.8rem;}
         padding: 1rem 5rem;
     }
 
-    .postcards__front{
-        margin-bottom: 2rem;
-    }
-
     .postcards__back {
         display: flex;
         justify-content: space-between;
-
+        margin-top: 2rem;
     }
 
 
