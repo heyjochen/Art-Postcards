@@ -257,12 +257,12 @@ small, .text_small {font-size: 0.8rem;}
         display: flex;
         justify-content: space-between;
         align-content: center;
+        margin-top: 2rem;
     }
 
 
     .postcards__front, .postcards__back{
         width: 100%;
-        margin: 2rem;
     }
 
     h5 {
@@ -296,7 +296,7 @@ small, .text_small {font-size: 0.8rem;}
     }
 
     .postcards{
-        display: block
+        display: block;
 
 
     }
