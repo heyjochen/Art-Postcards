@@ -88,7 +88,7 @@ button{
 button:hover{
     background-color: white;
     color: rgb(213, 220, 240);
-    cursor: crosshair;
+    cursor: pointer;
 }
 
 /******************************************
@@ -130,13 +130,13 @@ button:hover{
 .postcards__back__artworkInfo{
     width: 80%;
     text-align: left;
-
 }
 
-.postcards__back__header div{
+.stamp{
     border: .15rem solid black;
     width: 9%;
     height: 100%;
+    aspect-ratio: 3 / 3;
 
 }
 
@@ -157,22 +157,20 @@ button:hover{
     font-weight: 500;
     vertical-align: bottom;
     font-size: clamp(1.6rem, 1.4vw, 5rem);
-    line-height: 1.4;
-}
-
-.postcards__back__paragraph p{
-    width: 90%;
+    line-height: 1.2;
     overflow: hidden;
 }
 
-/* .postcards__back__divider{
+
+.postcards__back__divider{
     width: .3rem;
     height: 100%;
     margin: 0 1rem;
     background-color: black;
-} */
+}
 
 .postcards__back__address{ 
+    height: 100%;
     width: 38%;
     text-align: right;
     position: relative;
@@ -184,6 +182,7 @@ button:hover{
     bottom: 0;
     right: 0;
     width: 100%;
+    height: 60%;
 }
 
 /******************************************
@@ -204,7 +203,6 @@ h1, h2, h3, h4, h5 {
 h1 {
     font-family: 'Water Brush', cursive;
     font-weight: 500;
-    border-bottom: .5rem solid white;
     text-align: center;
     font-weight: 700;
     margin-top: 0;
@@ -263,7 +261,13 @@ small, .text_small {font-size: 0.8rem;}
 
     h5 {
         font-size: 1rem;
+    }
 
+    .postcard-textelements{
+        font-size: 2vw;
+    }
+    .postcards__back__artworkInfo{
+        font-size: 1.4vw;
     }
 
 }
