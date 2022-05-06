@@ -237,11 +237,11 @@ small, .text_small {font-size: 0.8rem;}
 /******************************************
 /* RESPONSIVE BEHAVIOUR
 /*******************************************/
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
 
-    main{
+    /* main{
         max-width: 700px;
-    }
+    } */
 
     .postcards{
         display: block;
@@ -275,14 +275,14 @@ small, .text_small {font-size: 0.8rem;}
 /******************************************
 /* Print Mode Behaviour
 /*******************************************/
+
+
 @media print {
-    /*  */
-    @page { size: auto;  margin: 0mm; }
+    /* @page { size: auto;  margin: 0mm; } */
 
     body{
         display: flex;
         justify-content: center;
-
     }
 
 
@@ -301,7 +301,7 @@ small, .text_small {font-size: 0.8rem;}
     }
 
     .postcards__front, .postcards__back{
-        margin-top: 4rem;
+        /* margin-top: 4rem; */
         width: 6in;
         height: 4in;
     }
@@ -311,5 +311,5 @@ small, .text_small {font-size: 0.8rem;}
         -webkit-break-before: page;
         break-before: page;
     }
-       
+
 }
