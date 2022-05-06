@@ -296,7 +296,7 @@ small, .text_small {font-size: 0.8rem;}
     }
 
 
-    button, h1{
+    button, h1, .subtitle{
         height: 0;
         visibility: hidden;
     }
