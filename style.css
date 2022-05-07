@@ -47,7 +47,7 @@ main{
 }
 
 .postcard-textelements {
-    padding: 2rem;
+    padding: .5rem;
     resize: none;
     border-radius: 10px;
     border: .2rem solid transparent;
@@ -263,6 +263,14 @@ small, .text_small {font-size: 0.8rem;}
         width: 100%;
     }
 
+    h1{
+        font-size: 5vw;
+    }
+
+    h4{
+        font-size: 1.3rem;
+    }
+
     h5 {
         font-size: 1rem;
     }
@@ -308,6 +316,8 @@ small, .text_small {font-size: 0.8rem;}
 
     .postcards{
         display: block;
+        margin: 0;
+        padding: 0;
     }
 
     .postcards__front, .postcards__back{
@@ -320,6 +330,7 @@ small, .text_small {font-size: 0.8rem;}
         page-break-before: page;
         -webkit-break-before: page;
         break-before: page;
+        box-shadow: none;
     }
 
 }
